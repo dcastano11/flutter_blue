@@ -305,6 +305,7 @@ public class FlutterBluePlugin implements FlutterPlugin, ActivityAware, MethodCa
 
                 // New request, connect and add gattServer to Map
                 BluetoothGatt gattServer;
+                
                 gattServer = device.connectGatt(context, options.getAndroidAutoConnect(), mGattCallback, BluetoothDevice.TRANSPORT_LE);
                 /* if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     gattServer = device.connectGatt(context, options.getAndroidAutoConnect(), mGattCallback, BluetoothDevice.TRANSPORT_LE);
@@ -312,6 +313,7 @@ public class FlutterBluePlugin implements FlutterPlugin, ActivityAware, MethodCa
                     gattServer = device.connectGatt(context, options.getAndroidAutoConnect(), mGattCallback);
                 } */
                 //mDevices.put(deviceId, new BluetoothDeviceCache(gattServer));
+                log("*********  ----COMENTARIOS DAVID --- *************")
                 result.success(null);
                 break;
             }
