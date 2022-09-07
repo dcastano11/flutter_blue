@@ -313,7 +313,8 @@ public class FlutterBluePlugin implements FlutterPlugin, ActivityAware, MethodCa
                     gattServer = device.connectGatt(context, options.getAndroidAutoConnect(), mGattCallback);
                 } */
                 //mDevices.put(deviceId, new BluetoothDeviceCache(gattServer));
-                log("*********  ----COMENTARIOS DAVID --- *************")
+                log.i("*********  ----COMENTARIOS DAVID --- *************")
+                log.d("*********  ----COMENTARIOS DAVID 2 --- *************")
                 result.success(null);
                 break;
             }
