@@ -276,11 +276,6 @@ public class FlutterBluePlugin implements FlutterPlugin, ActivityAware, MethodCa
             case "connect":
             {
 
-                log.i(null,"*********  ----COMENTARIOS DAVID --- *************")
-                log.d(null,"*********  ----COMENTARIOS DAVID 2 --- *************")
-                log.e(null,"*********  ----COMENTARIOS DAVID --- *************")
-                log.w(null,"*********  ----COMENTARIOS DAVID 2 --- *************")
-                log.v(null,"*********  ----COMENTARIOS DAVID 2 --- *************")
                 byte[] data = call.arguments();
                 Protos.ConnectRequest options;
                 try {
@@ -312,7 +307,7 @@ public class FlutterBluePlugin implements FlutterPlugin, ActivityAware, MethodCa
                 // New request, connect and add gattServer to Map
                 BluetoothGatt gattServer;
                 
-                gattServer = device.connectGatt(context, options.getAndroidAutoConnect(), mGattCallback, BluetoothDevice.TRANSPORT_AUTO);
+                gattServer = device.connectGatt(context, /* options.getAndroidAutoConnect() */false, mGattCallback/* , BluetoothDevice.TRANSPORT_AUTO */);
                 /* if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     gattServer = device.connectGatt(context, options.getAndroidAutoConnect(), mGattCallback, BluetoothDevice.TRANSPORT_LE);
                 } else {
